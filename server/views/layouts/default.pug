@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        //- 声明变量 title 用于其他继承子类进行替换
+        block title
+        //- 引入样式文件 关键字 include
+        include ../includes/style
+    body
+        //- 声明变量 content 用于其他继承子类进行替换
+        block content
+        include ../includes/script

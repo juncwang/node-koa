@@ -1,0 +1,16 @@
+//- 继承父组件
+extends ./layouts/default
+
+//- 声明变量 title 用于替换父类的 block title
+block title
+    title Koa Douban 首页
+
+//- 声明变量 content 用于替换父类的 block content
+block content
+    div.container
+        div.row
+            div.col-md-8
+                h1 Hi #{you}
+                p This is #{me}
+            div.col-md-4
+                h3 测试模板引擎中间件
