@@ -66,7 +66,11 @@ const temp = (async () => {
     })
 
     browser.close()
-    console.log(result)
+    // console.log(result)
+
+    // 把 result 发送到调用者并退出该程序
+    process.send({result})
+    process.exit(0)
 })
 
 temp()
