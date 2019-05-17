@@ -21,11 +21,11 @@ setTimeout(() => {
     console.log('200毫秒后到期执行的定时器回调')
 }, 200);
 
-readFile('../../package.json', 'utf-8', data => {
+readFile('../package.json', 'utf-8', data => {
     console.log('完成文件 1 读操作的回调')
 })
 
-readFile('../../README.md', 'utf-8', data => {
+readFile('../README.md', 'utf-8', data => {
     console.log('完成文件 2 读操作的回调')
 })
 
