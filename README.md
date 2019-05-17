@@ -12,3 +12,4 @@
     7. 1-7 parcel 打包 react 实例及 babel 配置
     8. 2-1 puppeteer 爬虫脚本演示
     9. 2-2 child_process.fork 增加子进程跑爬虫脚本 
+    10. 2-3 对豆瓣 API 的获取
