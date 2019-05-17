@@ -1,5 +1,5 @@
 const base = 'https://movie.douban.com/subject/'
-const doubanId = '27040774'
+const doubanId = '26733371'
 const videoBase = `https://movie.douban.com/trailer/231125/#content`
 // http://vt1.doubanio.com/201808231003/68436461d37cf1256056b384b215eb1e/view/movie/M/402310125.mp4
 const puppeteer = require('puppeteer')

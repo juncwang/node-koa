@@ -27,7 +27,7 @@ const { resolve } = require('path')
 
     //监听message消息，得到data，也即子进程返回的结果
     child.on('message', data => {
-
+        // https://img3.doubanio.com/view/photo/l_ration_poster/public/p2410512421.jpg
         console.log(data)
     })
 })()
