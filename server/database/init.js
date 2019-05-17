@@ -1,7 +1,15 @@
-// 数据库插件 npm install mongoose
 const mongoose = require('mongoose')
 const db = 'mongodb://localhost/douban-trailer'
+const { resolve } = require('path')
+
+const glob = require('glob')
+
 mongoose.Promise = global.Promise
+
+//同步加载schema目录下的所有model文件
+exports.initSchemas = () => {
+    glob.sync(resolve(__dirname, './schema', '**/*.js')).forEach(require)
+}
 
 exports.connect = () => {
     //最大重连次数
@@ -15,12 +23,12 @@ exports.connect = () => {
             mongoose.set('debug', true)
         }
 
-        mongoose.connect(db, {useNewUrlParser: true}) //5.0版本前还需要一些配置参数
+        mongoose.connect(db) //5.0版本前还需要一些配置参数
 
         mongoose.connection.on('disconnected', () => {
             maxConnectTimes ++
             if (maxConnectTimes < 5) {
-                mongoose.connect(db, {useNewUrlParser: true})
+                mongoose.connect(db)
             } else {
                 throw new Error('数据库问题，请尽快修复')
             }           
