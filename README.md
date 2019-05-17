@@ -19,3 +19,4 @@
     14. 2-7 增加事件模型代码示例
     15. 3-1 koa 链接 mongodb
     16. 3-2 创建 mongoose.Schema 数据结构
+    17. 3-3 创建 user 并对 schema 中方法及中间件进行限制
