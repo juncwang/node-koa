@@ -13,15 +13,15 @@ const { connect, initSchemas } = require('./database/init')
     initSchemas()
 
     // //测试movie的schema是否成功
-    const Movie = mongoose.model('Movie')
-    const movies = await Movie.find({})
-    console.log(movies)
+    // const Movie = mongoose.model('Movie')
+    // const movies = await Movie.find({})
+    // console.log(movies)
 
     //运行movie子进程的脚本
     // require('./tasks/movie.js')
 
     //运行api子进程的脚本
-    // require('./tasks/api.js')
+    require('./tasks/api.js')
 })()
 
 // const { htmlTpl, ejsTpl } = require('./tpl')

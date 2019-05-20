@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-// 加密器 npm install bcrypt
 const bcrypt = require('bcrypt')
 const Schema = mongoose.Schema
 const Mixed = Schema.Types.Mixed
